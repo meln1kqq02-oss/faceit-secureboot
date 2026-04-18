@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Решение Secure Boot | Faceit</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, sans-serif;
+            background: linear-gradient(135deg, #0a0e27, #1a1f3a);
+            color: white;
+            padding: 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header { text-align: center; padding: 40px 20px; }
+        h1 { font-size: 2rem; margin-bottom: 20px; }
+        .badge {
+            background: rgba(0,212,255,0.2);
+            border: 1px solid #00d4ff;
+            padding: 8px 20px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        .pricing { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 40px 0; }
+        .card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 24px;
+            padding: 30px;
+            width: 280px;
+            text-align: center;
+        }
+        .price { font-size: 2rem; color: #00d4ff; margin: 15px 0; }
+        .btn {
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+        }
+        .services { margin: 40px 0; text-align: center; }
+        .services-grid { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+        .service-item {
+            background: rgba(0,0,0,0.3);
+            border-radius: 20px;
+            padding: 20px;
+            width: 200px;
+        }
+        .form-section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 24px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 12px;
+            color: white;
+        }
+        .footer { text-align: center; padding: 30px; color: #a0aec0; }
+        .work-time { background: rgba(124,58,237,0.2); padding: 10px 20px; border-radius: 40px; display: inline-block; margin-bottom: 20px; }
+        a { color: #00d4ff; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="badge">🔧 Работаю с ноября 2025</div>
+            <h1>Решение ошибки Secure Boot<br>для Faceit Anti-Cheat</h1>
+            <p>Быстрая помощь. Оплата только после результата.</p>
+        </div>
+
+        <div class="pricing">
+            <div class="card">
+                <h3>💻 Стандарт</h3>
+                <div class="price">от 500 ₽</div>
+                <ul style="list-style: none; text-align: left; padding-left: 15px;">
+                    <li>✓ Диагностика</li>
+                    <li>✓ Включение Secure Boot</li>
+                    <li>✓ Настройка BIOS</li>
+                </ul>
+                <button class="btn" onclick="alert('Напишите @Meln1kqq в Telegram')">Выбрать</button>
+            </div>
+            <div class="card">
+                <h3>⚙️ Сложный</h3>
+                <div class="price">от 1 500 ₽</div>
+                <ul style="list-style: none; text-align: left; padding-left: 15px;">
+                    <li>✓ Всё из Стандарта</li>
+                    <li>✓ Конвертация MBR в GPT</li>
+                    <li>✓ Восстановление загрузчика</li>
+                    <li>✓ Гарантия</li>
+                </ul>
+                <button class="btn" onclick="alert('Напишите @Meln1kqq в Telegram')">Выбрать</button>
+            </div>
+        </div>
+
+        <div class="services">
+            <h2>🛠️ Услуги на дому (Стерлитамак)</h2>
+            <div class="services-grid">
+                <div class="service-item">💿 Переустановка Windows</div>
+                <div class="service-item">🖥️ Сборка ПК</div>
+                <div class="service-item">🧹 Чистка ПК и ноутбука</div>
+            </div>
+            <p>📞 Цены обсуждаются индивидуально — напишите в Telegram</p>
+        </div>
+
+        <div class="form-section">
+            <h2>📝 Оставить заявку</h2>
+            <form id="orderForm">
+                <input type="text" id="name" placeholder="Ваше имя *" required>
+                <input type="text" id="telegram" placeholder="Telegram @username или номер *" required>
+                <select id="tariff">
+                    <option>Стандарт — от 500 ₽</option>
+                    <option>Сложный — от 1 500 ₽</option>
+                    <option>Переустановка Windows</option>
+                    <option>Сборка ПК</option>
+                    <option>Чистка ПК/ноутбука</option>
+                </select>
+                <textarea id="problem" rows="3" placeholder="Опишите проблему..."></textarea>
+                <button type="submit" class="btn">📩 Отправить заявку</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <div class="work-time">🕐 Ежедневно: 14:00 – 02:00 по МСК</div>
+            <p>📱 Telegram: <a href="https://t.me/Meln1kqq" target="_blank">@Meln1kqq</a></p>
+            <p>💳 Оплата после решения • Карта / СБП / ЮMoney</p>
+            <p>📍 Выезд по Стерлитамаку</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const telegram = document.getElementById('telegram').value;
+            const tariff = document.getElementById('tariff').value;
+            const problem = document.getElementById('problem').value;
+            const msg = `🔧 ЗАЯВКА%0A👤 Имя: ${encodeURIComponent(name)}%0A📱 Telegram: ${encodeURIComponent(telegram)}%0A💰 Услуга: ${encodeURIComponent(tariff)}%0A📝 Описание: ${encodeURIComponent(problem)}`;
+            window.open(`https://t.me/Meln1kqq?text=${msg}`, '_blank');
+            alert('Заявка открыта в Telegram. Отправьте её.');
+        });
+    </script>
+</body>
+</html>
